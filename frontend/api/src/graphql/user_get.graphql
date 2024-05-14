@@ -1,0 +1,8 @@
+query GetUser($email: String!) {
+	getUser(email: $email) {
+		ID
+		Email
+		LastName
+		FirstName
+	}
+}

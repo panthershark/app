@@ -1,0 +1,24 @@
+version: "2"
+sql:
+- schema: "./db/migrations"
+  queries: "./db/sqlc"
+  engine: "postgresql"
+  strict_order_by: false
+  gen:
+    go:
+      sql_package: "pgx/v5"
+      out: "db/dbc"
+      emit_result_struct_pointers: true
+      emit_interface: true
+      overrides:
+        - db_type: "format_option"
+          go_type: "string"
+        - go_type: "time.Time"
+          db_type: "timestamptz"
+        # https://github.com/sqlc-dev/sqlc/issues/1796#issuecomment-1229721396
+        - go_type: "github.com/shopspring/decimal.Decimal"
+          db_type: "pg_catalog.numeric"
+        - db_type: "uuid"
+          go_type:
+            import: "github.com/google/uuid"
+            type: "UUID"

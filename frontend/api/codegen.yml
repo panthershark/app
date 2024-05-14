@@ -1,0 +1,12 @@
+overwrite: true
+schema: "../../backend/internal/graph/schema.graphqls"
+documents: "src/**/*.graphql"
+generates:
+  src/generated/graphql.ts:
+    config:
+      skipTypename: true
+      declarationKind: 'interface'
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typed-document-node"

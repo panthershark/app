@@ -1,0 +1,34 @@
+{
+  "name": "@panthershark/frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build -ws",
+    "format": "npm run format -ws",
+    "lint": "npm run lint -ws",
+    "test": "npm run test -ws",
+    "test-watch": "npm run test-watch -ws"
+  },
+  "workspaces": [
+    "api",
+    "app"
+  ],
+  "devDependencies": {
+    "@preact/signals": "^1.2.3",
+    "@testing-library/preact": "^3.2.3",
+    "@urql/core": "^5.0.3",
+    "@urql/exchange-auth": "^2.2.0",
+    "@urql/exchange-retry": "^1.3.0",
+    "@urql/preact": "^4.1.0",
+    "autoprefixer": "^10.4.19",
+    "cssnano": "^7.0.1",
+    "happy-dom": "^14.10.2",
+    "inter-ui": "^4.0.2",
+    "postcss": "^8.4.38",
+    "postcss-rem": "^3.0.0",
+    "preact-router": "^4.1.2",
+    "prettier": "^3.2.5",
+    "sass": "^1.77.1"
+  }
+}

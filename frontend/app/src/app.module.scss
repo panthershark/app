@@ -1,0 +1,17 @@
+@import "./style/typography.scss";
+
+.wrap {
+  border: solid 1px var(--gray--200);
+  background-color: var(--success--25);
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: toRem(300px);
+  margin: toRem(14px);
+}
+
+.hello {
+  @include font-size(display-md);
+  color: var(--success--700);
+  font-weight: var(--font-weight-semibold);
+}

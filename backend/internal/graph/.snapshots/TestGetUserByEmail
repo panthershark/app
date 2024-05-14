@@ -1,0 +1,6 @@
+(*model.User)({
+  ID: (uuid.UUID) (len=16) 8b8c0b77-837f-400b-a943-093f92096580,
+  Email: (string) (len=14) "hulk@hogan.com",
+  FirstName: (string) (len=4) "Hulk",
+  LastName: (string) (len=5) "Hogan"
+})

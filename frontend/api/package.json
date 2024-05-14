@@ -1,0 +1,35 @@
+{
+	"name": "@panthershark/api",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"build": "npm run codegen && tsc && :",
+		"format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+		"lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+		"codegen": "graphql-codegen --config codegen.yml",
+		"test": "vitest",
+		"test-watch": "vitest watch",
+		"coverage": "vitest run --coverage"
+	},
+	"devDependencies": {
+		"@graphql-codegen/cli": "^5.0.0",
+		"@graphql-codegen/typed-document-node": "^5.0.1",
+		"@graphql-codegen/typescript": "^4.0.1",
+		"@graphql-codegen/typescript-operations": "^4.0.1",
+		"@graphql-typed-document-node/core": "^3.2.0",
+		"graphql": "^16.8.1",
+		"prettier": "^3.1.1",
+		"typescript": "^5.3.3",
+		"vite": "^5.0.10",
+		"vite-plugin-graphql-codegen": "^3.3.5",
+		"vitest": "^1.1.0"
+	},
+	"prettier": {
+		"singleQuote": true,
+		"trailingComma": "none",
+		"useTabs": true,
+		"tabWidth": 2,
+		"printWidth": 120
+	}
+}

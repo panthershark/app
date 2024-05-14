@@ -1,0 +1,75 @@
+@use "sass:list";
+@import "./vars.scss";
+
+$font-sizes: (
+  display-2xl: (
+    72px,
+    90px,
+    -0.02em,
+  ),
+  display-xl: (
+    60px,
+    72px,
+    -0.02em,
+  ),
+  display-lg: (
+    48px,
+    60px,
+    -0.02em,
+  ),
+  display-md: (
+    36px,
+    44px,
+    -0.02em,
+  ),
+  display-sm: (
+    30px,
+    38px,
+    0,
+  ),
+  display-xs: (
+    24px,
+    32px,
+    0,
+  ),
+  xl: (
+    20px,
+    30px,
+    0,
+  ),
+  lg: (
+    18px,
+    28px,
+    0,
+  ),
+  md: (
+    16px,
+    24px,
+    0,
+  ),
+  sm: (
+    14px,
+    20px,
+    0,
+  ),
+  xs: (
+    12px,
+    18px,
+    0,
+  ),
+);
+
+@mixin font-size($font-size) {
+  $list: map-get($font-sizes, $font-size);
+
+  font-size: toRem(list.nth($list, 1));
+  line-height: toRem(list.nth($list, 2));
+  letter-spacing: list.nth($list, 3);
+}
+
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}

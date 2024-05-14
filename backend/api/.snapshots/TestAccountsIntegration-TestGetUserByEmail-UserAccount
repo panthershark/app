@@ -1,0 +1,10 @@
+(*api.Account)({
+  ID: (uuid.UUID) (len=16) a8f474b0-400e-492c-8541-0026d3b9a047,
+  Email: (string) (len=14) "hulk@hogan.com",
+  Person: (*api.Person)({
+    ID: (uuid.UUID) (len=16) 04e7a054-31d4-48e8-b313-5c38031636b2,
+    AccountID: (uuid.UUID) (len=16) a8f474b0-400e-492c-8541-0026d3b9a047,
+    FirstName: (string) (len=4) "Hulk",
+    LastName: (string) (len=5) "Hogan"
+  })
+})

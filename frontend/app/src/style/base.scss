@@ -1,0 +1,145 @@
+@import "./typography.scss";
+
+// This is a minimal reset.
+
+html {
+  font-family: "Inter", "system-ui";
+  min-width: 100vw;
+  min-height: 100vh;
+
+  body {
+    margin: 0;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", "system-ui";
+    font-size: var(--font-base-px);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: never;
+
+    color: var(--gray--800);
+  }
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-variant: var(--font-variant-monospace);
+  background: var(--gray--50);
+  border: toRem(1px) solid var(--gray--200);
+  border-radius: toRem(4px);
+  color: var(--gray--600);
+  padding: toRem(2px) toRem(4px);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0;
+  }
+}
+
+div,
+form {
+  display: flex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  @include font-size(display-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+h2 {
+  @include font-size(display-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+h3 {
+  @include font-size(display-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+h4 {
+  @include font-size(lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+h5 {
+  @include font-size(md);
+  font-weight: var(--font-weight-semibold);
+}
+
+h6,
+p {
+  @include font-size(md);
+  font-weight: var(--font-weight-semibold);
+}
+
+p {
+  padding: toRem(4px) 0;
+  margin: 0;
+}
+
+hr {
+  flex: none;
+  width: 100%;
+  height: toRem(1px);
+  background-color: var(--gray--200);
+  border: 0;
+  margin: toRem(16px) auto;
+}
+
+strong {
+  font-weight: var(--font-weight-semibold);
+}
+
+a {
+  color: var(--primary--700);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary--800);
+}
+
+dialog {
+  background: var(--gray--25);
+  box-shadow: var(--shadow--xl);
+  border-radius: toRem(12px);
+  border: none;
+  padding: 0;
+
+  &::backdrop {
+    background: rgba(52, 64, 84, 0.7);
+    backdrop-filter: blur(8px);
+  }
+}
+
+button {
+  @include font-size(sm);
+
+  border: none;
+  color: var(--gray--800);
+  background-color: transparent;
+  font-family: "Inter", "system-ui";
+  padding: toRem(10px) toRem(16px);
+  gap: toRem(8px);
+  cursor: pointer;
+}
